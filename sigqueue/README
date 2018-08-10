@@ -1,0 +1,4 @@
+I found in signal(7) and by using these tests that SIGUSR2 is not guaranteed to queue.
+In our case (in gvnsr) that means that if multiple SIGUSR2's are sent, the handler
+may be invoked only once.  But, the SIGRTxxx signals do queue, receipt is guaranteed,
+and order is guaranteed.  I need that in GVNSR
