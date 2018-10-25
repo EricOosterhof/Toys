@@ -7,9 +7,11 @@ using namespace std;
 class test
 {
  public:
-  const string mName;
   test(const string &name) : mName(name) {};
   const string name() { return mName; };
+
+private:
+    const string mName;
 };
 
 int main(int argc, char**argv)
